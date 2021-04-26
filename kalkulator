@@ -1,0 +1,60 @@
+import math
+
+print("---KALKULATOR LAJU KOROSI---")
+
+
+## Definisi Fungsi ##
+def f(Wi,Wf,A,T,D,K):
+	
+	#Wi = float(input("Masukan Wi = "))
+	#Wf = float(input("Masukan Wf = "))
+
+	LJK = (Wi-Wf) / (A*T*D) * K
+	return LJK
+
+## Definisi Variabel ##
+Wi = float(input("Masukan Wi = "))
+Wf = float(input("Masukan Wf = "))
+A = 16.8
+D = 7.86
+K = 8.76 * 10000
+T = 720
+
+## Menunjukan Kalkulasi ##
+
+print("Laju Korosi = ", f(Wi,Wf,A,T,D,K))
+
+## Menunjuka pengulangan / tidak ##
+
+print("--- Pilihan ---")
+print("1. Countinue")
+print("2. Close")
+
+## Menginputkan pilihan ## 
+
+menu = input("Masukan Pilihan = ")
+
+## Membuat Pengulangan ## 
+
+while (menu == '1' ):
+	Wi = float(input("Masukan Wi = "))
+	Wf = float(input("Masukan Wf = "))
+	print("Laju Korosi = ", f(Wi,Wf,A,T,D,K))
+	print("--- Pilihan ---")
+	print("1. Continue \n2. Close")
+	menu = input("Masukan Pilihan = ")
+	if menu == '2':
+		break
+	#elif menu =="2":
+		#break
+
+
+
+
+
+
+
+
+
+
+
